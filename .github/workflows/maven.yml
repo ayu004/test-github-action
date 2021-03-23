@@ -4,9 +4,12 @@
 name: Java CI with Maven
 
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/10 * * * *'
+  push:
+    branches:
+      - main
+#  schedule:
+#    # * is a special character in YAML so you have to quote this string
+#    - cron:  '*/10 * * * *'
 jobs:
   build:
 
@@ -14,4 +17,4 @@ jobs:
 
     steps:
     - name: Build with Maven
-      run: echo "Hello World"
+      run: echo "Hello to push event"
