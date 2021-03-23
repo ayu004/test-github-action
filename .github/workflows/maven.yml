@@ -13,6 +13,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - name: Build with Maven
       run: echo "Hello World"
